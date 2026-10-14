@@ -1,0 +1,33 @@
+{
+  "customer-001": {
+    "customer_id": "customer-001",
+    "plan": "Free",
+    "tenure_months": 4,
+    "prior_support_tickets": 0,
+    "notes": [
+      "Upgrade to Pro attempted.",
+      "First time contacting support."
+    ]
+  },
+  "customer-002": {
+    "customer_id": "customer-002",
+    "plan": "Enterprise",
+    "tenure_months": 8,
+    "region": "Thailand",
+    "seats": 45,
+    "prior_support_tickets": null,
+    "notes": [
+      "First critical issue."
+    ]
+  },
+  "customer-003": {
+    "customer_id": "customer-003",
+    "plan": "Pro",
+    "tenure_months": 5,
+    "prior_support_tickets": 0,
+    "notes": [
+      "Active user with daily logins.",
+      "No previous support tickets."
+    ]
+  }
+}

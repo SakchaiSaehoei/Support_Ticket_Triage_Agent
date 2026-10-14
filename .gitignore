@@ -69,9 +69,6 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
-
 # PyBuilder
 .pybuilder/
 target/
@@ -218,3 +215,51 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local uv cache and private environment variants
+.uv-cache/
+.rag-cache/
+.state/
+.env.*
+!.env.example
+
+# Local assessment, working documentation, and test run notes
+/docs/
+/tests/README.md
+
+# Generated exports
+/output/
+
+# Local experiments and working files
+/experiments/
+/scratch/
+/tmp/
+/temp/
+*.tmp
+*.bak
+*.orig
+
+# Local databases, including SQLite transaction files
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Machine-specific editor, assistant, and operating system files
+/.idea/
+/.vscode/
+/.codex/
+/.agents/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

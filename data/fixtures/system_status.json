@@ -1,0 +1,6 @@
+{
+  "default": {
+    "status": "unknown",
+    "summary": "No live service-status integration is configured. Investigate reported failures independently."
+  }
+}

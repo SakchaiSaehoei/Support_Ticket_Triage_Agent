@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "support-ticket-triage-agent"
+version = "0.1.0"
+description = "Interactive support ticket triage CLI using OpenAI, LangGraph, and FastMCP."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph",
+    "langchain-openai",
+    "langchain-mcp-adapters",
+    "fastmcp>=3.2,<4",
+    "pydantic",
+    "python-dotenv",
+    "langsmith>=0.14.8",
+    "openai>=3.26",
+    "langchain-chroma>=0.2,<2",
+    "chromadb>=1.5,<2",
+    "langgraph-checkpoint-sqlite>=3.1.1,<4",
+    "aiosqlite>=0.22,<1",
+    "rich>=14.3,<16",
+]
+
+[project.scripts]
+support-triage = "support_ticket_triage.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/support_ticket_triage"]
+
+[tool.uv]
+cache-dir = ".uv-cache"
+# langchain-mcp-adapters currently imports MCP 1.x APIs.
+constraint-dependencies = ["mcp>=1.24,<2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
